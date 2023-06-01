@@ -22,10 +22,10 @@ public:
 
 	void applyCompoundInterest()
 	{
-		balance *= (1 + compoundInterest);
+		balance *= (100 + compoundInterest)/100;
 	}
 
-	void setCompoundInterest(double x)
+	void setCompoundInterest(int x)
 	{
 		compoundInterest = x;
 	}
@@ -35,12 +35,12 @@ public:
 		int result = balance;
 		for(int i=0;i<year;i++)
 		{
-			result *= (1 + compoundInterest);
+			result *= (100 + compoundInterest)/100;
 		}
 		return result;
 	}
 
 private:
 	int balance{0};
-	double compoundInterest{ 0.05 };
+	double compoundInterest{ 5 };
 };

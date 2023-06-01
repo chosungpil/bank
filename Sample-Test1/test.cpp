@@ -23,12 +23,12 @@ TEST_F(AccountFixture, ApplyCompoundInterest) {
 	EXPECT_EQ(10500, account.getBalance());
 }
 TEST_F(AccountFixture, SetCompoundInterest) {
-	account.setCompoundInterest(0.1);
+	account.setCompoundInterest(10);
 	account.applyCompoundInterest();
 	EXPECT_EQ(11000, account.getBalance());
 }
 TEST_F(AccountFixture, balancePrediction) {
-	account.setCompoundInterest(0.1);
+	account.setCompoundInterest(10);
 	
 	EXPECT_EQ(16105, account.getBalancePrediction(5));
 }
