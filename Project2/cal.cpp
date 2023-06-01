@@ -25,15 +25,15 @@ public:
 		balance *= (100 + compoundInterest)/100;
 	}
 
-	void setCompoundInterest(int x)
+	void setCompoundInterest(int interest)
 	{
-		compoundInterest = x;
+		compoundInterest = interest;
 	}
 
-	int getBalancePrediction(int year)
+	int getBalancePrediction(int periodInYear)
 	{
 		int result = balance;
-		for(int i=0;i<year;i++)
+		for(int i = 0; i < periodInYear; i++)
 		{
 			result *= (100 + compoundInterest)/100;
 		}
